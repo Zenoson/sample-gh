@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>한국의 유네스코 문화유산 알리기</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela+Round"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#page-top">
+          <img src="assets/img/unesco_logo.svg" />
+        </a>
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="pre-unesco_list.html">VOTES</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- About-->
+    <section class="about-section text-center" id="about">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="text-white mb-4">VOTES FOR KOREA</h2>
+
+            <p class="text-white-50">
+              한국의 유네스코 잠정 유산 목록 중 <br />
+              유네스코 세계유산에 등록되었으면 하는 유산에 투표해주세요.<br />
+              여러분의 마음이 모여 한국의 유네스코 세계유산이 더욱 빛을 발하게
+              될 것입니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects-->
+    <section class="projects-section bg-light" id="projects">
+      <div class="container px-4 px-lg-5">
+        <!-- 유적지 1 -->
+        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+          <div class="col-lg-4">
+            <img class="img-fluid" src="assets/img/pre-list-1.jpg" alt="..." />
+          </div>
+          <div class="col-lg-8">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div
+                  class="project-text w-100 my-auto text-center text-lg-left"
+                >
+                  <h4 class="text-white">강진도요지</h4>
+                  <p class="mb-0 text-white-50">
+                    전라남도 강진 군에있는 고려시대 토기나 청자를 굽던 가마터
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 ms-0" />
+                  <a
+                    target="_blank"
+                    href="http://www.heritage.go.kr/heri/cul/culSelectDetail.do;jsessionid=A0QzayCsFU0ghUzYw6UBPZHw1TsHJ6aFPZaEYyK62UeYO2Cvb5v8DtrMyYaYiMA4.cpawas2_servlet_engine1?pageNo=1_1_2_0&ccbaCpno=2333600810000"
+                  >
+                    <button type="button" class="btn btn-link">MORE</button>
+                  </a>
+                </div>
+                <button
+                  onclick="onClickVote(this)"
+                  type="button"
+                  class="btn btn-primary btn-vote"
+                >
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <span class="vote-count">1</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <!-- 유적지 2 -->
+        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+          <div class="col-lg-4">
+            <img class="img-fluid" src="assets/img/pre-list-2.jpg" alt="..." />
+          </div>
+          <div class="col-lg-8">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div
+                  class="project-text w-100 my-auto text-center text-lg-left"
+                >
+                  <h4 class="text-white">염전</h4>
+                  <p class="mb-0 text-white-50">
+                    전남 신안군, 영광군의 염전. 천일염을 생산하는 곳.
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 ms-0" />
+                  <a
+                    target="_blank"
+                    href="http://www.heritage.go.kr/heri/cul/culSelectDetail.do?pageNo=1_1_2_0&VdkVgwKey=79,03600000,36"
+                  >
+                    <button type="button" class="btn btn-link">MORE</button>
+                  </a>
+                </div>
+                <button
+                  onclick="onClickVote(this)"
+                  type="button"
+                  class="btn btn-primary btn-vote"
+                >
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <span class="vote-count">5</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <!-- 유적지 3 -->
+        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+          <div class="col-lg-4">
+            <img class="img-fluid" src="assets/img/pre-list-3.jpg" alt="..." />
+          </div>
+          <div class="col-lg-8">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div
+                  class="project-text w-100 my-auto text-center text-lg-left"
+                >
+                  <h4 class="text-white">대곡천 암각화군</h4>
+                  <p class="mb-0 text-white-50">
+                    울산 대곡리 반구대 암각화, 천전리 각석. <br />세계에서 가장
+                    오래된 고래사냥 암각화이다.
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 ms-0" />
+                  <a
+                    target="_blank"
+                    href="http://www.heritage.go.kr/heri/cul/culSelectDetail.do?pageNo=1_1_2_0&VdkVgwKey=11,02850000,26"
+                  >
+                    <button type="button" class="btn btn-link">MORE</button>
+                  </a>
+                </div>
+                <button
+                  onclick="onClickVote(this)"
+                  type="button"
+                  class="btn btn-primary btn-vote"
+                >
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <span class="vote-count">0</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <!-- 유적지 4 -->
+        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+          <div class="col-lg-4">
+            <img class="img-fluid" src="assets/img/pre-list-4.jpg" alt="..." />
+          </div>
+          <div class="col-lg-8">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div
+                  class="project-text w-100 my-auto text-center text-lg-left"
+                >
+                  <h4 class="text-white">낙안읍성</h4>
+                  <p class="mb-0 text-white-50">
+                    전라남도 순천시 낙안면에 있는 조선시대의 읍성 <br />고려
+                    후기부터 잦은 왜구의 침입으로 인한 피해를 막기 위해, 조선
+                    전기에 흙으로 쌓은 성
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 ms-0" />
+                  <a
+                    target="_blank"
+                    href="http://www.heritage.go.kr/heri/cul/culSelectDetail.do?pageNo=1_1_2_0&VdkVgwKey=13,03020000,36"
+                  >
+                    <button type="button" class="btn btn-link">MORE</button>
+                  </a>
+                </div>
+                <button
+                  onclick="onClickVote(this)"
+                  type="button"
+                  class="btn btn-primary btn-vote"
+                >
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <span class="vote-count">0</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 유적지 5 -->
+        <!-- 유적지 6 -->
+        <!-- 유적지 7 -->
+        <!-- 유적지 8 -->
+        <!-- 유적지 9 -->
+        <!-- 유적지 10 -->
+      </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer bg-black small text-center text-white-50">
+      <div class="container px-4 px-lg-5">Copyright &copy; SEONHO HAN 2022</div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
