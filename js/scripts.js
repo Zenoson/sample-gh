@@ -50,8 +50,36 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 });
 
+var clickedList = ["", ""];
+var index = 0;
+
 function onClickVote(dom) {
   // 클릭한 dom의 마지막 child 요소의 text content 에 +1
-  dom.lastElementChild.textContent =
-    parseInt(dom.lastElementChild.textContent) + 1;
+  if (index == 2) {
+    return;
+  }
+
+  var inList = false;
+  for (let i = 0; i < 2; i++) {
+    if (dom.lastElementChild == clickedList[i]) {
+      inList = true;
+      break;
+    }
+  }
+
+  if (!inList) {
+    dom.lastElementChild.textContent =
+      parseInt(dom.lastElementChild.textContent) + 1;
+    clickedList[index++] = dom.lastElementChild;
+  } else {
+    index--;
+    dom.lastElementChild.textContent = 
+      parseInt(dom.lastElementChild.textContent) - 1;
+    for (let i = 0; i < 2; i++) {
+      if (dom.lastElementChild == clickedList[i]) {
+        clickedList[i] = "";
+        break;
+      }
+    }
+  }
 }
