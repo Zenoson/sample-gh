@@ -56,8 +56,18 @@ var index = 0;
 function onClickVote(dom) {
   // 클릭한 dom의 마지막 child 요소의 text content 에 +1
   if (index == 2) {
-    return;
+    index--;
+    for (let i = 0; i < 2; i++) {
+      if (dom.lastElementChild == clickedList[i]) {
+        clickedList[i]="";
+        dom.lastElementChild.textContent=
+          parseInt(dom.lastElementChild.textContent) - 1;
+        break;
+      }
+    }
   }
+
+  else {
 
   var inList = false;
   for (let i = 0; i < 2; i++) {
@@ -82,4 +92,5 @@ function onClickVote(dom) {
       }
     }
   }
+}
 }
