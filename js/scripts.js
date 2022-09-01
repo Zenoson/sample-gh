@@ -50,47 +50,86 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 });
 
-var clickedList = ["", ""];
+// var clickedList = ["", ""];
+// var index = 0;
+
+var clickedList = ["",""];
 var index = 0;
 
 function onClickVote(dom) {
   // 클릭한 dom의 마지막 child 요소의 text content 에 +1
-  if (index == 2) {
-    index--;
-    for (let i = 0; i < 2; i++) {
-      if (dom.lastElementChild == clickedList[i]) {
-        clickedList[i]="";
-        dom.lastElementChild.textContent=
-          parseInt(dom.lastElementChild.textContent) - 1;
-        break;
-      }
-    }
-  }
-
-  else {
-
+  
   var inList = false;
+
   for (let i = 0; i < 2; i++) {
-    if (dom.lastElementChild == clickedList[i]) {
+    if (clickedList[i] == dom.lastElementChild.id) {
+      console.log("in list");
+
       inList = true;
+      dom.lastElementChild.textContent=
+        parseInt(dom.lastElementChild.textContent) - 1;
+      clickedList[i] = "";
+
+
       break;
     }
   }
 
   if (!inList) {
-    dom.lastElementChild.textContent =
-      parseInt(dom.lastElementChild.textContent) + 1;
-    clickedList[index++] = dom.lastElementChild;
-  } else {
-    index--;
-    dom.lastElementChild.textContent = 
-      parseInt(dom.lastElementChild.textContent) - 1;
     for (let i = 0; i < 2; i++) {
-      if (dom.lastElementChild == clickedList[i]) {
-        clickedList[i] = "";
+      console.log(dom.lastElementChild);
+      console.log(clickedList[i]);
+      if (clickedList[i] == "") {
+        console.log("not in list");
+        clickedList[i] = dom.lastElementChild.id;
+        
+        console.log(dom.lastElementChild.id)
+
+        dom.lastElementChild.textContent=
+          parseInt(dom.lastElementChild.textContent) + 1;
+
+
         break;
       }
     }
   }
-}
+
+
+  // if (index == 2) {
+  //   index--;
+  //   for (let i = 0; i < 2; i++) {
+  //     if (dom.lastElementChild == clickedList[i]) {
+  //       clickedList[i]="";
+  //       dom.lastElementChild.textContent=
+  //         parseInt(dom.lastElementChild.textContent) - 1;
+  //       break;
+  //     }
+  //   }
+  // }
+
+  // else {
+
+  // var inList = false;
+  // for (let i = 0; i < 2; i++) {
+  //   if (dom.lastElementChild == clickedList[i]) {
+  //     inList = true;
+  //     break;
+  //   }
+  // }
+
+  // if (!inList) {
+  //   dom.lastElementChild.textContent =
+  //     parseInt(dom.lastElementChild.textContent) + 1;
+  //   clickedList[index++] = dom.lastElementChild;
+  // } else {
+  //   index--;
+  //   dom.lastElementChild.textContent = 
+  //     parseInt(dom.lastElementChild.textContent) - 1;
+  //   for (let i = 0; i < 2; i++) {
+  //     if (dom.lastElementChild == clickedList[i]) {
+  //       clickedList[i] = "";
+  //       break;
+  //     }
+  //   }
+  // }
 }
